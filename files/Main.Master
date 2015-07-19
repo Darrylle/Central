@@ -1,0 +1,49 @@
+﻿<%@ Master 
+    Language="C#" 
+    AutoEventWireup="true" 
+    CodeBehind="Main.master.cs" 
+    Inherits="central.Main" %>
+
+<%@ Register 
+    src="Controls/Login.ascx" 
+    tagname="Login" 
+    tagprefix="uc1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Central Information Server</title>
+    <link href="Style/MainStyle.css" 
+          rel="stylesheet" />
+    <asp:ContentPlaceHolder 
+        ID="head" 
+        runat="server">           
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="Header">
+            <div id="Login">
+                <uc1:Login 
+                    ID="Login1" 
+                    runat="server"/>
+            </div>
+            Central Information Server            
+        </div>
+        <div id="MainContent">
+            <asp:ContentPlaceHolder 
+                ID="ContentPlaceHolder1" 
+                runat="server">               
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="Footer">
+            Copyright 
+                <asp:Literal 
+                    ID="ltlYear" runat="server">
+                </asp:Literal> 
+            Visual Central
+        </div>
+    </form>
+</body>
+</html>
